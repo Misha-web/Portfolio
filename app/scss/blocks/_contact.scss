@@ -21,7 +21,7 @@
 		margin-top: 20px;
 		font-size: 28px;
 	}
-	&__email-img {
+	&__item-img {
 		width: 100px;
 		margin: 0 auto;
 		border-radius: 50%;
@@ -34,7 +34,9 @@
 		}
 
 	}
-	&__email-link {
-
+	&__link {
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }

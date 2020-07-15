@@ -92,6 +92,17 @@
 				}
 			}
 		}
+
+		&:nth-child(8) {
+			.skills-percent__svg {
+				circle {
+					&:nth-child(2) {
+						stroke-dashoffset: calc(440 - (440 * 80) / 100);
+						stroke: #03d8ac;
+					}
+				}
+			}
+		}
 		&:hover {
 			transform: translateY(-15px);
 			box-shadow: 0px 15px 30px rgba(0,0,0,0.5);
@@ -103,9 +114,6 @@
 						color: #fff;
 					}
 				}
-			}
-			.skills-number__subtitle {
-				color: #fff;
 			}
 		}
 		&:before {
@@ -172,6 +180,7 @@
 	}
 	&__subtitle {
 		margin-top: 20px;
+		color: #fff;
 	}
 }
 

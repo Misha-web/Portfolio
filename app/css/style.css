@@ -640,6 +640,8 @@ template {
 }
 
 .nav {
+  position: relative;
+  z-index: 5;
   display: flex;
   align-items: center;
   height: 80px;
@@ -816,6 +818,7 @@ template {
 .about__inner {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -835,9 +838,44 @@ template {
   flex: 1 1 70%;
 }
 
+.about__content-name {
+  font-size: 30px;
+}
+
 .about__content-text {
   line-height: 30px;
   font-size: 18px;
+}
+
+.about__content-text strong {
+  font-size: 24px;
+}
+
+.about__content-text span {
+  color: #000;
+  border-bottom: 2px solid #ffc815;
+  font-weight: 700;
+}
+
+.about__content-menu {
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.about__content-list {
+  margin-bottom: 7px;
+}
+
+.about__content-description {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 990px) {
+  .about__img {
+    order: -1;
+  }
 }
 
 .skills {
@@ -902,6 +940,11 @@ template {
   stroke: #03d8ac;
 }
 
+.skills__card:nth-child(8) .skills-percent__svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 80) / 100);
+  stroke: #03d8ac;
+}
+
 .skills__card:hover {
   transform: translateY(-15px);
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
@@ -913,10 +956,6 @@ template {
 }
 
 .skills__card:hover .skills-number__title span {
-  color: #fff;
-}
-
-.skills__card:hover .skills-number__subtitle {
   color: #fff;
 }
 
@@ -990,6 +1029,7 @@ template {
 
 .skills-number__subtitle {
   margin-top: 20px;
+  color: #fff;
 }
 
 .works {
@@ -1080,18 +1120,22 @@ template {
   font-size: 28px;
 }
 
-.contacts__email-img {
+.contacts__item-img {
   width: 100px;
   margin: 0 auto;
   border-radius: 50%;
   background: #2c3e50;
 }
 
-.contacts__email-img img {
+.contacts__item-img img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
   padding: 20px;
+}
+
+.contacts__link:hover {
+  text-decoration: underline;
 }
 
 body {
