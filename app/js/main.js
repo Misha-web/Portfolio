@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	//nav fixed
 	const navOffset = $('#nav').offset().top;
 	const navHeight = $('#nav').height();
 	$(window).scroll(function() {
@@ -16,6 +17,7 @@ $(document).ready(function() {
 	$(".nav__burger").on("click", function(event) {
 		event.preventDefault();
 		$(".nav__menu,.nav__burger").toggleClass('active');
+		$("body").toggleClass('lock');
 	});
 
 	//Smoove scroll
@@ -23,6 +25,9 @@ $(document).ready(function() {
 		event.preventDefault();
 		let blockId = $(this).data('scroll'),
 			blockOffset = $(blockId).offset().top;
+
+		$(".nav__menu,.nav__burger").removeClass('active');
+		$("body").removeClass('lock');
 
 		$("html, body").animate({
 			scrollTop: blockOffset

@@ -13,6 +13,9 @@ body {
     font-weight: 400;
     font-size: 18px;
     color: #000;
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 *,
@@ -41,6 +44,8 @@ button {
 }
 
 .logo {
+    position: relative;
+    z-index: 20;
     opacity: 0;
     font-size: 30px;
     color: #fff;
