@@ -1,6 +1,5 @@
 .skills {
-	background-color: #e8e5e5;
-	padding: 100px 0px 70px;
+	border-top: 2px solid #ddd;
 	&__inner {
 		display: flex;
 		justify-content: center;
@@ -78,6 +77,17 @@
 					&:nth-child(2) {
 						stroke-dashoffset: calc(440 - (440 * 70) / 100);
 						stroke: #990000;
+					}
+				}
+			}
+		}
+
+		&:nth-child(7) {
+			.skills-percent__svg {
+				circle {
+					&:nth-child(2) {
+						stroke-dashoffset: calc(440 - (440 * 50) / 100);
+						stroke: #03d8ac;
 					}
 				}
 			}
@@ -165,8 +175,4 @@
 	}
 }
 
-@media(max-width: $md3) {
-	.skills {
-		padding: 60px 0px 50px;
-	}
-}
+

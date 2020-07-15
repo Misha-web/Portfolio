@@ -1,76 +1,14 @@
 .header {
-	background-image: linear-gradient(rgba(0,0,0,.56),rgba(0,0,0,.56)),url(../img/header-bg.jpg);
-	height: 100vh;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 50% 0;
-	color: #fff;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	&__burger-wrapper {
-		position: fixed;
-		top: 30px;
-		right: 30px;
-		z-index: 6;
-	}
-	&__burger {
-		display: block;
-		position: relative;
-		width: 40px;
-		height: 30px;
-		&:hover {
-			&:before,
-			&:after {
-				transition: .2s linear;
-				background-color: #ffc815;
-			}
-			span {
-				transition: .2s linear;
-				background-color: #ffc815;
-			}
-		}
-		&:before,
-		&:after {
-			content: '';
-			background-color: #ccc;
-			position: absolute;
-			right: 0px;
-			z-index: 10;
-			width: 100%;
-			height: 4px;
-			transition: .2s linear;
-		}
-		&:before {
-			top: 0;
-		}
-		&:after {
-			bottom: 0;
-		}
-		span {
-			background-color: #ccc;
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			right: 0px;
-			width: 100%;
-			height: 4px;
-			transition: .2s linear;
-		}
-		&.active {
-			span {
-				transform: translateX(-30px);
-				opacity: 0;
-			}
-			&:before {
-				top: 13px;
-				transform: rotate(45deg);
-			}
-			&:after {
-				bottom: 13px;
-				transform: rotate(-45deg);
-			}
-		}
+	&__wrapper {
+		background-image: linear-gradient(rgba(0,0,0,.56),rgba(0,0,0,.56)),url(../img/header-bg.jpg);
+		height: 100vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 0;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		color: #fff;
 	}
 	&__inner {
 		max-width: 60%;

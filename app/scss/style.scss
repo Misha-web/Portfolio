@@ -2,10 +2,11 @@
 @import "libs";
 @import "fonts";
 @import "blocks/_header.scss";
-@import "blocks/_footer.scss";
 @import "blocks/_nav.scss";
+@import "blocks/_about.scss";
 @import "blocks/_skills.scss";
 @import "blocks/_works.scss";
+@import "blocks/_contact.scss";
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -39,6 +40,25 @@ button {
     border: none;
 }
 
+.logo {
+    opacity: 0;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 3px -3px 9px rgba(0,0,0,.5);
+    span {
+        color: #19bd9b;
+    }
+}
+
+@media(max-width: $md4) {
+    .logo {
+        font-size: 26px;
+    }
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -46,23 +66,18 @@ button {
     margin: 0 auto;
 }
 
+.section {
+    padding: 100px 0px 70px;
+}
+
 .title {
     text-align: center;
     position: relative;
-    padding-bottom: 10px;
     margin-bottom: 80px;
     font-size: 48px;
-    color: #000;
-    &:after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        width: 30%;
-        margin: 0 auto;
-        height: 3px;
-        background-color: #ffc815;
+    color: #2a2b2d;
+    span {
+        color: #19bd9b;
     }
 }
 
@@ -70,18 +85,16 @@ button {
     .title {
         margin-bottom: 60px;
         font-size: 42px;
-        &:after {
-            width: 50%;
-        }
+    }
+    .section {
+        padding: 60px 0px 50px;
     }
 }
+
 
 @media(max-width: $md4) {
     .title {
         margin-bottom: 40px;
         font-size: 36px;
-        &:after {
-            width: 60%;
-        }
     }
 }

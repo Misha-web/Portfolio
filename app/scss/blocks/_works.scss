@@ -1,5 +1,5 @@
 .works {
-	padding: 100px 0px 50px;
+	border-top: 2px solid #ddd;
 	background-color: #fff;
 	&__inner {
 		display: flex;
@@ -29,7 +29,6 @@
 
 .works-content {
 	transition: .3s linear;
-	color: #fff;
 	background-color: rgba(0,0,0,.7);
 	position: absolute;
 	width: 100%;
@@ -37,24 +36,20 @@
 	top: -100%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	&__icon {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		display: inline-block;
-		width: 50px;
-		height: 50px;
-		cursor: pointer;
-		fill: #fff;
-		&:hover {
-			fill: red;
-		}
+	&__description {
+		margin-top: 50px;
+		color: #fff;
+		text-align: center;
+	}
+	&__link {
+		padding: 10px;
+		display: block;
+		text-align: center;
+		max-width: 150px;
+		margin: 30px auto 0px;
+		text-decoration: none;
+		color: #19bd9b;
+		border: 1px solid #19bd9b; 
 	}
 }
 
-@media(max-width: $md3) {
-	.works {
-		padding: 60px 0px 50px;
-	}
-}

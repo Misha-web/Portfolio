@@ -1,8 +1,21 @@
 $(document).ready(function() {
+	const navOffset = $('#nav').offset().top;
+	const navHeight = $('#nav').height();
+	$(window).scroll(function() {
+		const scrolled = $(this).scrollTop();
+		if (scrolled > navOffset) {
+			$(".nav").addClass('nav-fixed');
+			$("#header").css({marginBottom: navHeight});
+		} else if (scrolled < navOffset) {
+			$(".nav").removeClass('nav-fixed');
+			$("#header").css({marginBottom: 0});
+		}
+	});
+
 	//Burger menu
-	$(".header__burger").on("click", function(event) {
+	$(".nav__burger").on("click", function(event) {
 		event.preventDefault();
-		$(".nav,.header__burger").toggleClass('active');
+		$(".nav__menu,.nav__burger").toggleClass('active');
 	});
 
 	//Smoove scroll
